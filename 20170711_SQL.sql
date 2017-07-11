@@ -29,9 +29,10 @@ select b.*, a.* from teacher a, course b
  where b.cTeachId = a.TeacherId
 
 //12 ??
-select * from student a, course b
+select a.* from student a, course b , teacher c
  where b.coursename = "Dentist"
-   and b. 
+   and b.cTeachId = c.TeacherId
+   and c.program = a.program
 
 //13 
 select * from student where program like 'B%'
